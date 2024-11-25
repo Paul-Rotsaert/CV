@@ -1,68 +1,137 @@
-header h1 {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 70px;
-    color: brown;
+
+.profil_container {
+    display: flex; /*Ce paramètre permet de dire à VSCODE que les éléments de cette parties vont pouvoir être mobiles.*/
+    justify-content: center; /*Ce second paramètre permet de placer le ou les éléments au centre de la page.*/
+    align-items: center;
+    padding: 100px;
 }
 
-#image_profile {
-    display: flex;
-    align-self: center;
-    font-weight: 60px;
-
+#image_profil {
+display: flex;
+justify-content: center;
+align-items: center;
+border:5px brown solid; /*Permet de changer la couleur de bordur.*/
+border-radius: 4px;
 }
 
-
-header h2 {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30;
-    padding-bottom: 30px;
-}
-
-nav li {
-    margin: 0 20px;
-    /*Sert à mettre une marge interne de chaque côté (dans mon cas autour des boutons).*/
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    max-width: 1500px;
-    margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    background-color: white;
+#texte_photo_1 {
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3), -4px -4px 4px rgba(255, 255, 255, 0.2); /*Permet de créer un effet d'ombre*/
+    border: 5px;
+    border-color: wheat; /*Permet de changer la couleur de bordure.*/
+    border-radius: 10px;
+    
+    margin: 40px;
     padding: 20px;
-    border-radius: 40px;
-    border-color: black;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    gap: 30px;
-
+    color: wheat; /*Permet de changer la couleur de bordure et du texte.*/
+    background-color: brown;
 }
 
-nav a {
+
+nav {
+    background-color: rgb(223, 186, 116);
+    border: 4px solid brown; /*Permet de définir la taille de la bordure, sa couleur, etc...*/
+    border-radius: 10px;
+    position: sticky;
+    padding: 20px;
+    margin: 20px;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /*Ce paramètre permet de placer les éléments à distances égales sur l'axe horizontale de la page.*/
+    align-items: center;
+}
+
+.burger {
+    /*Ici se trouve toute la partie du menu burger dans le responsive pour que cela modifie l'affiche en version mobile.*/
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.burger .line {
+    width: 25px;
+    height: 3px;
+    background-color: brown;
+}
+
+
+.nav-links {
+    list-style: none;
     text-decoration: none;
+    color: brown; /*Permet de changer la couleur de bordure.*/
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+
 }
 
-.nav_item a {
+.nav-links a {
+    text-decoration: none;
     color: brown;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+
 }
 
+.nav-links a:hover {
+    background-color: brown;
+    color: wheat; /*Permet de changer la couleur de bordure et du texte.*/
+}
 
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
 
-nav a:hover {
-    /*Le hover me permet de mettre mon texte en surbrillance quand le curseur passe par dessus.*/
-    color: black;
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: wheat;
+        border: 2px solid brown;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
 }
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: wheat;
+    color: brown;
+}
+
+.section {
+    padding: 40px 20px;
+    text-align: center; /*Permet d'aligner le texte au centre de la page.*/
+}
+
+header h2 {
+    text-align: center; /*Permet d'aligner le texte au centre de la page.*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30; /*Permet de regler la taille de la police.*/
+    padding-bottom: 30px;
+}
+
+
+
+body {
     max-width: 1400px;
-    background-color: white;
+    background-color: wheat;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .content {
@@ -73,11 +142,11 @@ body {
 
 
 #titre_profil {
-    background-color: white;
+    background-color: rgb(223, 186, 116);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3), -4px -4px 4px rgba(255, 255, 255, 0.2); /*Permet de créer un effet d'ombre*/
     border-radius: 20px;
     border: 4px solid;
     border-color: brown;
-    box-shadow: 40, 0px;
     text-align: center;
     color: brown;
     width: 300px;
@@ -89,37 +158,171 @@ body {
 #profil {
 
     border-radius: 30px;
-    color: whitesmoke;
+    border: 4px solid;
+    color: wheat; /*Permet de changer la couleur de bordure et du texte.*/
     padding: 20px;
-    margin: 120px;
+    margin: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3), -4px -4px 4px rgba(255, 255, 255, 0.2); /*Permet de créer un effet d'ombre*/
     background-color: brown;
-    border-color: black;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     gap: 30px;
-
 
 }
 
-#profil h3 {
-    text-align: center;
-    color: whitesmoke;
-    font-size: 34px;
+#icon_profil {
+    display: block;
+    margin: auto;
 }
 
 hr {
     height: 5px;
     background-color: brown;
+    border-radius: 10px;
 }
 
-#titre_experiences {
-    background-color: white;
+#titre_competences {
+    background-color: rgb(223, 186, 116);
+    border-radius: 20px;
+    border: 4px solid;
+    border-color: brown;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3), -4px -4px 4px rgba(255, 255, 255, 0.2); /*Permet de créer un effet d'ombre*/
+    text-align: center;
+    color: brown;
+    width: 300px;
+    padding: 25px;
+    margin: 130px auto;
+    font-size: 34px;
+}
+
+#competences {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    border: 4px solid;
+    color: wheat; /*Permet de changer la couleur de bordure et du texte.*/
+    background-color: brown;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3), -4px -4px 4px rgba(255, 255, 255, 0.2); /*Permet de créer un effet d'ombre*/
+    border-radius: 30px;
+    padding: 20px;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+
+}
+
+.item_competences {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#titre_outils {
+    background-color: rgb(223, 186, 116); /*Permet de changer la couleur de bordure et du texte.*/
+    border-radius: 20px;
+    border: 4px solid;
+    border-color: brown;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3), -4px -4px 4px rgba(255, 255, 255, 0.2); /*Permet de créer un effet d'ombre*/
+    text-align: center;
+    color: brown;
+    width: 300px;
+    padding: 25px;
+    margin: 130px auto;
+    font-size: 34px;
+}
+
+#outils {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 20px;
+    margin: 20px;
+    border: 4px solid;
+    color: wheat; /*Permet de changer la couleur de bordure et du texte.*/
+    background-color: brown;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3), -4px -4px 4px rgba(255, 255, 255, 0.2); /*Permet de créer un effet d'ombre*/
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+
+}
+
+.item_outils {
+    display: flex;
+    flex-direction: column;
+}
+#titre_real{
+    background-color: rgb(223, 186, 116);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3), -4px -4px 4px rgba(255, 255, 255, 0.2); /*Permet de créer un effet d'ombre*/
     border-radius: 20px;
     border: 4px solid;
     border-color: brown;
     box-shadow: 40, 0px;
     text-align: center;
+    color: brown;
+    width: 300px;
+    padding: 25px;
+    margin: 130px auto;
+    font-size: 34px;
+}
+
+#realisations {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux projets de passer à la ligne si nécessaire */
+    gap: 20px;
+    justify-content: space-between; /* Sert à créer un espace de même taille entre les éléments sur l'axe horizontal */
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px; /* Sert à limiter la largeur sur un écran d'ordinateur */
+    background-color: brown; /* Sert à mettre une couleur de fond pour toute la section des projets */
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /*Permet de créer un effet d'ombre*/
+}
+
+#realisations .projet {
+    flex: 1 1 calc(30% - 20px);
+    max-width: calc(30% - 20px);
+    background-color: wheat; /* Sert à mettre une couleur de fond derrière chaque projet */
+    border-radius: 10px; 
+    padding: 15px; /* Ici se trouve un paramètre qui créé un espacement intérieur */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+#realisations .projet img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px;
+    margin-bottom: 10px; /* Ce paramètre permet de créer un espacement avec le texte */
+}
+
+#realisations .projet p {
+    font-size: 1.1rem;
+    color: brown;
+    margin: 0; 
+    font-weight: 600; /* Texte en gras */
+}
+
+/* Toute cette partie est dediée au responsive pour la partie téléphone. */
+@media (max-width: 768px) {
+    #realisations {
+        justify-content: center; /* Centre les projets sur petit écran */
+    }
+    #realisations .projet {
+        flex: 1 1 100%; /* Ce paramètre permet de placer un projet par ligne */
+        max-width: 100%; 
+    }
+}
+
+
+
+#titre_experiences {
+    text-align: center;
+    background-color: rgb(223, 186, 116); /*Permet de changer la couleur de bordure et du texte.*/
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3), -4px -4px 4px rgba(255, 255, 255, 0.2); /*Permet de créer un effet d'ombre*/
+    border-radius: 20px;
+    border: 4px solid;
+    border-color: brown;
     color: brown;
     width: 300px;
     padding: 25px;
@@ -128,92 +331,26 @@ hr {
 }
 
 #experiences {
-    background-color: brown;
-    box-shadow: 60px;
-    color: whitesmoke;
-    border-radius: 30px;
-    padding: 20px;
-    margin: 120px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-
-}
-
-#experiences h3 {
     text-align: center;
-    color: whitesmoke;
-    font-size: 34px;
-}
-
-#titre_parcours {
-    background-color: white;
-    border-radius: 20px;
     border: 4px solid;
-    border-color: brown;
-    box-shadow: 40, 0px;
-    text-align: center;
-    color: brown;
-    width: 300px;
-    padding: 25px;
-    margin: 130px auto;
-    font-size: 34px;
-}
-
-#parcours {
+    color: wheat; /*Permet de changer la couleur de bordure et du texte.*/
+    align-content: center;
     background-color: brown;
-    box-shadow: 60px;
-    color: whitesmoke;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3), -4px -4px 4px rgba(255, 255, 255, 0.2); /*Permet de créer un effet d'ombre*/
     border-radius: 30px;
     padding: 20px;
-    margin: 120px;
+    margin: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 
-}
-
-#parcours h3 {
-    text-align: center;
-    color: whitesmoke;
-    font-size: 34px;
-}
-
-#titre_competences {
-    background-color: white;
-    border-radius: 20px;
-    border: 4px solid;
-    border-color: brown;
-    box-shadow: 40, 0px;
-    text-align: center;
-    color: brown;
-    width: 300px;
-    padding: 25px;
-    margin: 130px auto;
-    font-size: 34px;
-}
-#competences {
-    background-color: brown;
-    box-shadow: 60px;
-    color: whitesmoke;
-    border-radius: 30px;
-    padding: 20px;
-    margin: 120px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-
-}
-
-#competences h3 {
-    text-align: center;
-    color: whitesmoke;
-    font-size: 34px;
 }
 
 #titre_contact {
-    background-color: white;
+    background-color: rgb(223, 186, 116); /*Permet de changer la couleur de bordure et du texte.*/
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3), -4px -4px 4px rgba(255, 255, 255, 0.2); /*Permet de créer un effet d'ombre*/
     border-radius: 20px;
     border: 4px solid;
     border-color: brown;
-    box-shadow: 40, 0px;
     text-align: center;
     color: brown;
     width: 300px;
@@ -223,13 +360,22 @@ hr {
 }
 
 #contact {
-    background-color: brown;
+    text-decoration: none;
+    color: wheat; /*Permet de changer la couleur de bordure et du texte.*/
+    border: 4px solid;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3), -4px -4px 4px rgba(255, 255, 255, 0.2); /*Permet de créer un effet d'ombre*/
     box-shadow: 60px;
-    color: whitesmoke;
+    background-color: brown;
     border-radius: 30px;
     padding: 20px;
-    margin: 120px;
+    margin: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 
 }
+
+.footer_link {
+    color: rgb(223, 186, 116);
+    text-decoration: none;
+}
+@media screen {}

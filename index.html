@@ -5,86 +5,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
+    <!-- Nous avons ici le titre de la page qui apparaît dans l'onglet -->
     <title>Mon CV numérique par Paul Rotsaert</title>
 </head>
 
 <body>
     <header>
+
         <section>
-            <h1>Mon CV numérique</h1>
-            <img id="image_profil" src="assets/pictures/photo-test-cv.jpeg" alt="Photo de profil">
-
+            <div class="profil_container">
+                <!-- Image de profil -->
+                <img id="image_profil" src="assets/pictures/photo_profil.jpeg" alt="Photo de profil" height="300"
+                    width="280"> <!--Ici  height and with servent à donner une taille précise à la photo de profil.-->
+                <p id="texte_photo_1">Actuellement en première année de Bachelor dans l’école du numérique la Manu. Je
+                    suis
+                    passionné par le
+                    design, le montage vidéo et la création 3D.</p>
+            </div>
         </section>
-
+        <!-- Section de la navigation -->
         <section id="grands_titres">
             <nav>
-                <ul>
-                    <li class="nav_item"><a href="#titre_profil">
-                            <h2>Profil</h2>
-                        </a></li>
-                    <li class="nav_item"><a href="#titre_experiences">
-                            <h2>Expériences professionelles</h2>
-                        </a></li>
-                    <li class="nav_item"><a href="#titre_parcours">
-                            <h2>Parcours scolaire</h2>
-                        </a></li>
-                    <li class="nav_item"><a href="#titre_competences">
-                            <h2>Compétences</h2>
-                        </a></li>
-                    <li class="nav_item"><a href="#titre_contact">
-                            <h2>Me contacter</h2>
-                        </a></li>
-                </ul>
+                <div class="nav-container">
+                    <a id="nav_link">Mon CV Numérique par Paul Rotsaert</a>
+                    <!-- Bouton burger pour la version mobile -->
+                    <label for="menu_swap" class="burger" aria-label="Menu">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </label>
+
+                    <ul class="nav-links">
+                        <li><a href="#profil">Profil</a></li>
+                        <li><a href="#competences">Compétences</a></li>
+                        <li><a href="#outils">Outils</a></li>
+                        <li><a href="#realisations">Mes réalisations</a></li>
+                        <li><a href="#experiences">Expériences</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
             </nav>
+        </section>
+
     </header>
+    <!-- Ici se trouve le contenu principal de la page -->
     <main id="main">
-        <h3 id="titre_profil">Mon profil</h3>
-        <section id="profil">
-            <i>icone de profile</i>
-            <p>
-                <br>Je m'appelle Paul Rotsaert, je suis née à Compiègne le 13 janvier 2005. Je
-                suis titulaire du permis de conduire et j'ai également une voiture en ma possession. Au quotidien,
-                je suis une
-                personne créative, à l'écoute mais également aidante. Je dispose également d'un bon esprit d'équipe.
-                Mes
-                defauts sont le manque de patience et le fait d'être plutôt têtu. Durant mon temps libre, j'aime
-                jouer
-                aux jeux vidéos, écouter de la musique, regarder des films et séries ou même faire des
-                constructions en lego.
-            </p>
+        <section>
+            <h3 id="titre_profil">Mon profil</h3>
+
         </section>
-        <hr>
-        <h3 id="titre_experiences">Mes expériences professionelles</h3>
-        <section id="experiences">
-            <p>J'ai travaillé 2 semaines dans l'entreprise Placoplatre durant l'année 2023-2024, <br>-J'ai réalisé un
-                stage de 7 semaines dans l'agence WALACOM
-                Durant l'année 2023-2024, j'ai également travaillé dans une entreprise dans le domaine de la logistique
-            </p>
+        <section id="profil" class="section">
+            <div class="card">
+                <h4>Presentation</h4>
+                <p>
+                    <br>Je m'appelle Paul Rotsaert, je suis née à Compiègne le 13 janvier 2005. Je
+                    suis titulaire du permis de conduire et j'ai également une voiture en ma possession. Au quotidien,
+                    je suis une
+                    personne créative, à l'écoute mais également aidante. Je dispose également d'un bon esprit d'équipe.
+                    <br>
+                    Mes defauts sont le manque de patience et le fait d'être plutôt têtu. Durant mon temps libre, j'aime
+                    jouer
+                    aux jeux vidéos, écouter de la musique, regarder des films et séries ou même faire des
+                    constructions en lego.
+                    <br>
+                    J'ai obtenu le diplôme du baccalauréat dans la filiaire STMG avec la mention "assez bien". <br>
+                    Durant l'année 2023-2024, j'airéalisé une première année dans un BTS communication au CNED.
+                </p>
+            </div>
         </section>
-        <hr>
-        <h3 id="titre_parcours">Mon parcours</h3>
-        <section id="parcours">
-            <p>J'ai obtenu le diplôme du baccalauréat dans la filiaire STMG avec la mention "assez bien". <br> Durant
-                l'année 2023-2024, j'ai
-                réalisé une première année dans un BTS communication au CNED. </p>
-        </section>
-        <hr>
-        <h3 id="titre_competences">Mes compétences</h3>
+        <hr> <!--le "hr" créé une ligne de sépération entres les différentes parties de la page.    -->
+        <h3 id="titre_competences">Compétences</h3>
         <section id="competences">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam et odit eum est consequatur alias ullam,
-                placeat laboriosam tempore sed nam soluta, sunt illum. Nostrum enim id reiciendis blanditiis
-                accusantium.</p>
+            <div class="item_competences">
+                <!-- Ici se trouve les différentes compétences avec les notes correspondantes à mon niveau. -->
+                <img src="assets/pictures/Photoshop-Logo.png" height="80px" alt="logo de l'application photoshop">
+                <p>2,5/5</p>
+            </div>
+            <div class="item_competences">
+                <img src="assets/pictures/Illustrator-logo-0-1.png" height="100px"
+                    alt="logo de l'application illustrator">
+                <p>3/5</p>
+            </div>
+            <div class="item_competences">
+                <img src="assets/pictures/Blender_logo.png" height="80px" alt="logo de l'application blender">
+                <p>3/5</p>
+            </div>
+        </section>
+
+        <hr>
+        <!-- Même situation que pour les compétences mais cette fois pour les différents outils. -->
+        <h3 id="titre_outils">Outils</h3>
+        <section id="outils">
+            <div>
+                <img class="item_outils" src="assets/pictures/logo_css.png" height="80px" alt="logo du language css">
+                <p>2/5</p>
+            </div>
+            <div>
+                <img class="item_outils" src="assets/pictures/logo_html.png" height="100px" alt="logo du language html">
+                <p>2,5/5</p>
+            </div>
+            <div>
+                <img class="item_outils" src="assets/pictures/logo_javascript.png" height="80px"
+                    alt="logo du language javascript">
+                <p>1/5</p>
+            </div>
+            <div>
+                <img class="item_outils" src="assets/pictures/logo_github.png" height="80px" alt="logo de github">
+                <p>2/5</p>
+            </div>
+        </section>
+
+        <hr>
+        <!-- Ici se trouve la section des réalisations. -->
+        <h3 id="titre_real">Vitrine de mes réalisations</h3>
+        <section id="realisations">
+            <div class="projet">
+                <img src="assets/pictures/image_projet_1.png" alt="Image projet daft punk">
+                <p>Maquettage et reproduction d'interface spotify</p>
+            </div>
+            <div class="projet">
+                <img src="assets/pictures/Image_projet_2.png" alt="image projet grouvesync">
+                <p>Maquettage GrouveSync</p>
+            </div>
+            <div class="projet">
+                <img src="assets/pictures/projet_3.png" alt="Image projet cv numérique">
+                <p>Projet CV numérique</p>
+            </div>
+        </section>
+
+        <hr>
+        <!-- Ici se trouve la section des expériences professionnelles -->
+        <h3 id="titre_experiences">Mes expériences professionelles</h3>
+        <section id="experiences" class="section">
+            <div class="card">
+
+                <h4>Job étudiant - Placoplatre (Le Meux)</h4>
+                <p>
+                    <!-- Les "br" servent à faire un retour à l aligne dans mon texte. -->
+                    Manutentionnaire Juillet 2024 :<br>
+                    Emballage de plaques de placo, <br> chargement et déchargement, <br>
+                    Ponctualité, <br> travail d’équipe, <br>respect des consignes </p>
+                <h4>Job étudiant - HSI (Longueil-Annel) </h4>
+                <p>Manutentionnaire / Graphiste
+                    Octobre et Décembre 2023 / Juin 2024 : <br>
+                    Préparation de commandes <br>
+                    Ponctualité, <br>réactivité,<br> gestion des priorités <br>
+                    Création d’un catalogue de vente <br>
+                    Autonomie, rigueur, connaissances en informatique</p>
+                <h4>Stage découverte - WALACOM (Compiègne)</h4>
+                <p>Stagiaire graphiste / design
+                    Janvier à Mars 2024
+                    Création de sites internet en utilisant le front-end, réalisation d’emailing, montage vidéo
+                    Ecoute, créativité, curiosité et adaptabilité </p>
+
+            </div>
+        </section>
+
+        <hr>
+        <!-- Ici se trouve la section de contact avec la possibilité d'envoyer un mail, de téléphoner ou d'accéder au LinkedIn. -->
+        <h3 id="titre_contact">Me contacter</h3>
+        <section id="contact" class="section">
+            <div class="card">
+                <p>Email : <a class="footer_link" href="mailto:paul.rtst5@gmail.com">paul.rtst5@gmail.com</a></p>
+                <p>Téléphone : <a class="footer_link" href="tel:+33123456789">+33 06 18 59 09 43</a></p>
+                <p>LinkedIn : <a class="footer_link"
+                        href="https://www.linkedin.com/in/paul-rotsaert-2538a5339/">https://www.linkedin.com/in/paul-rotsaert-2538a5339/</a>
+                </p>
+            </div>
         </section>
     </main>
     <footer>
-        <hr>
-        <h3 id="titre_contact">Me contacter</h3>
-        <section id="contact">
-            <p>Mon numéro de téléphone : 06 18 59 09 43 <br>
-                Mon adresse email : paul.rtst5@gmail.com <br>
-                LinkedIn : </p>
-        </section>
-        <br>
     </footer>
 </body>
 
